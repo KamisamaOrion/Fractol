@@ -6,7 +6,7 @@
 /*   By: mhervoch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 17:30:21 by mhervoch          #+#    #+#             */
-/*   Updated: 2024/01/23 23:51:06 by mhervoch         ###   ########.fr       */
+/*   Updated: 2024/02/28 11:57:23 by mhervoch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,12 @@ int	check_error(char **av)
 
 	cr = ft_atod(av[2]);
 	ci = ft_atod(av[3]);
-	if ((cr <= 2 && cr >= -2) || (ci <= 2 && ci >= -2))
+	if ((cr <= 2 && cr >= -2) && (ci <= 2 && ci >= -2))
 		return (1);
 	else
 	{
-		write(1, "Les points doivent etre entre 2 et -2\n", 38);
+		write(1, "Les points doivent etre entre 2 et -2\n\
+Point set a defaut\n", 59);
 		return (0);
 	}
 }
